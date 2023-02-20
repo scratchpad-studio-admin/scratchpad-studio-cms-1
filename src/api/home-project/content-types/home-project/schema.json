@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_projects",
+  "info": {
+    "singularName": "home-project",
+    "pluralName": "home-projects",
+    "displayName": "Home Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "home_project_cards": {
+      "displayName": "Project Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.project-card"
+    }
+  }
+}
