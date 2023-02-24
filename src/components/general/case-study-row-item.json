@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_general_case_study_row_items",
+  "info": {
+    "displayName": "case-study-row-item"
+  },
+  "options": {},
+  "attributes": {
+    "class": {
+      "type": "string"
+    },
+    "is_text": {
+      "type": "boolean",
+      "default": false
+    },
+    "text": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

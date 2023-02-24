@@ -1,11 +1,11 @@
 /**
- * home-project controller
+ * work controller
  */
 
 import { factories } from "@strapi/strapi";
 
 export default factories.createCoreController(
-  "api::home-project.home-project",
+  "api::work.work",
   ({ strapi }) => ({
     async findAll(ctx) {
       const filters = {
@@ -16,7 +16,7 @@ export default factories.createCoreController(
       };
       const query = {
         populate: {
-          home_project_cards: {
+          work_list: {
             fields: ["row", "column"],
             populate: {
               project: {
@@ -33,7 +33,7 @@ export default factories.createCoreController(
         filters: filters,
       };
       const entry = await strapi.entityService.findMany(
-        "api::home-project.home-project",
+        "api::work.work",
         query
       );
       return entry;

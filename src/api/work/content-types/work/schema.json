@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "works",
+  "info": {
+    "singularName": "work",
+    "pluralName": "works",
+    "displayName": "Work"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "work_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.project-card"
+    }
+  }
+}

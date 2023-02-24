@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_general_case_study_rows",
+  "info": {
+    "displayName": "case-study-row",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "class": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.case-study-row-item"
+    }
+  }
+}
