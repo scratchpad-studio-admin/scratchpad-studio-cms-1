@@ -61,6 +61,11 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "next_project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
     }
   }
 }

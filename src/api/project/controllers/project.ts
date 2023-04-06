@@ -19,7 +19,7 @@ export default factories.createCoreController(
         populate: ["cover_image"],
         filters: filters,
       };
-      const entry = await strapi.entityService.find(
+      const entry = await strapi.entityService.findMany(
         "api::project.project",
         query
       );
@@ -38,10 +38,27 @@ export default factories.createCoreController(
         populate: {
           contents: {
             fields: "*",
-            populate: ["items"],
+            populate: {
+              items: {
+                fields: "*",
+                populate: {
+                  image: {
+                    fields: "url",
+                  },
+                },
+              },
+            },
           },
           header_image: {
             fields: "url",
+          },
+          next_project: {
+            fields: ["name", "slug"],
+            populate: {
+              cover_image: {
+                fields: ["url"],
+              },
+            },
           },
         },
         sort: sort,
