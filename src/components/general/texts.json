@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_general_texts",
+  "info": {
+    "displayName": "texts"
+  },
+  "options": {},
+  "attributes": {
+    "input": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

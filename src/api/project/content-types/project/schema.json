@@ -25,11 +25,6 @@
         "images"
       ]
     },
-    "contents": {
-      "type": "component",
-      "repeatable": true,
-      "component": "general.case-study-row"
-    },
     "url": {
       "type": "string"
     },
@@ -49,9 +44,9 @@
       "type": "string",
       "required": true
     },
-    "header_image": {
+    "header_images": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images"
@@ -66,6 +61,20 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::project.project"
+    },
+    "assets": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "texts": {
+      "displayName": "texts",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.texts"
     }
   }
 }

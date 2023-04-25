@@ -36,21 +36,14 @@ export default factories.createCoreController(
       const query = {
         fields: "*",
         populate: {
-          contents: {
-            fields: "*",
-            populate: {
-              items: {
-                fields: "*",
-                populate: {
-                  image: {
-                    fields: "url",
-                  },
-                },
-              },
-            },
-          },
-          header_image: {
+          header_images: {
             fields: "url",
+          },
+          assets: {
+            fields: "url",
+          },
+          texts: {
+            fields: "input"
           },
           next_project: {
             fields: ["name", "slug"],
